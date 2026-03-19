@@ -1121,6 +1121,140 @@ body{color:var(--txt);font-family:'Nunito Sans',sans-serif;font-size:14px;-webki
 .corr-iva-cell:last-child{border-right:none;}
 .corr-iva-lbl{font-size:9px;text-transform:uppercase;letter-spacing:.6px;color:var(--txt3);margin-bottom:4px;font-weight:700;}
 .corr-iva-val{font-family:'Space Grotesk',sans-serif;font-size:12px;font-weight:700;}
+
+/* ── REALTIME TICKER ── */
+.rt-ticker{display:flex;align-items:center;gap:8px;background:var(--acc-dim);border:1px solid rgba(124,110,247,.3);border-radius:var(--r-full);padding:4px 12px;margin:0 16px;overflow:hidden;height:28px;}
+.rt-ticker-dot{width:6px;height:6px;border-radius:50%;background:var(--green);box-shadow:0 0 6px rgba(0,224,160,.8);flex-shrink:0;animation:pulse 1.5s infinite;}
+.rt-ticker-lbl{font-size:10px;color:var(--txt3);font-weight:700;text-transform:uppercase;letter-spacing:.8px;flex-shrink:0;}
+.rt-ticker-val{font-family:'Space Grotesk',sans-serif;font-size:13px;font-weight:700;color:var(--acc);white-space:nowrap;}
+.rt-ticker-stores{display:flex;gap:8px;overflow:hidden;flex:1;}
+.rt-store-chip{display:flex;align-items:center;gap:4px;font-size:11px;font-weight:700;white-space:nowrap;flex-shrink:0;}
+
+/* ── SEZIONE ONLINE ── */
+.online-list{padding:8px 16px;}
+.online-store-card{background:var(--surf2);border:1px solid var(--bdr);border-radius:var(--r-l);padding:12px 14px;margin-bottom:8px;display:flex;align-items:center;gap:10px;box-shadow:var(--shadow-1);}
+.online-store-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0;box-shadow:0 0 8px currentColor;}
+.online-store-info{flex:1;min-width:0;}
+.online-store-name{font-size:13px;font-weight:700;color:var(--txt);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.online-store-addr{font-size:10px;color:var(--txt3);margin-top:1px;}
+.online-store-right{text-align:right;flex-shrink:0;}
+.online-store-val{font-family:'Space Grotesk',sans-serif;font-size:16px;font-weight:700;color:var(--txt);}
+.online-store-pct{font-size:10px;color:var(--txt3);margin-top:2px;}
+
+/* ── FASCE KPI PER NEGOZIO ── */
+.f-store-row{margin:0 16px 8px;background:var(--surf2);border:1px solid var(--bdr);border-radius:var(--r-l);overflow:hidden;box-shadow:var(--shadow-1);}
+.f-store-row-hd{display:flex;align-items:center;gap:8px;padding:8px 14px;border-bottom:1px solid var(--bdr);background:var(--surf3);}
+.f-store-row-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0;}
+.f-store-row-name{font-size:12px;font-weight:700;color:var(--txt);}
+.f-store-kpis{display:flex;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;}
+.f-store-kpis::-webkit-scrollbar{display:none;}
+.f-store-kpi{flex:0 0 auto;min-width:90px;padding:9px 12px;border-right:1px solid var(--bdr);text-align:center;}
+.f-store-kpi:last-child{border-right:none;}
+.f-store-kpi-lbl{font-size:9px;text-transform:uppercase;letter-spacing:.7px;color:var(--txt3);margin-bottom:4px;font-weight:700;}
+.f-store-kpi-val{font-family:'Space Grotesk',sans-serif;font-size:13px;font-weight:700;color:var(--txt);}
+
+/* ── FULLSCREEN BUTTON ── */
+/* fs-btn come tab-item - nessun fixed */
+#fs-btn.is-fs .tab-icon{background:var(--acc-dim);}
+#fs-btn.is-fs .tab-icon svg{stroke:var(--acc);}
+#fs-btn.is-fs .tab-lbl{color:var(--acc);font-weight:800;}
+/* Triple-tap toast */
+.triple-toast{position:fixed;top:50%;left:50%;transform:translate(-50%,-50%) scale(.8);background:rgba(13,15,20,.92);border:1px solid var(--bdr2);border-radius:var(--r-xl);padding:14px 24px;font-family:'Space Grotesk',sans-serif;font-size:14px;font-weight:700;color:var(--txt);z-index:9999;pointer-events:none;opacity:0;transition:all .25s var(--ease-spring);}
+.triple-toast.show{opacity:1;transform:translate(-50%,-50%) scale(1);}
+
+/* ── CORRISPETTIVI DETTAGLIO NEGOZI ── */
+.corr-stores{border-top:1px solid var(--bdr);}
+.corr-store-row{border-bottom:1px solid var(--bdr);}
+.corr-store-row:last-child{border-bottom:none;}
+.corr-store-hd{display:flex;align-items:center;gap:7px;padding:7px 14px;background:var(--surf3);}
+.corr-store-dot{width:7px;height:7px;border-radius:50%;flex-shrink:0;}
+.corr-store-name{font-size:11px;font-weight:700;color:var(--txt);}
+.corr-store-totals{display:grid;grid-template-columns:1fr 1fr 1fr;border-bottom:1px solid var(--bdr);}
+.corr-store-iva{display:grid;grid-template-columns:repeat(4,1fr);}
+.corr-st-cell{padding:6px 8px;text-align:center;border-right:1px solid var(--bdr);}
+.corr-st-cell:last-child{border-right:none;}
+.corr-st-lbl{font-size:8px;text-transform:uppercase;letter-spacing:.6px;color:var(--txt3);margin-bottom:3px;font-weight:700;}
+.corr-st-val{font-family:'Space Grotesk',sans-serif;font-size:11px;font-weight:700;color:var(--txt);}
+
+/* ── PAGAMENTI PER NEGOZIO ── */
+.pay-store-card{background:var(--surf2);border:1px solid var(--bdr);border-radius:var(--r-xl);margin:0 16px 10px;overflow:hidden;box-shadow:var(--shadow-1);}
+.pay-store-hd{display:flex;align-items:center;gap:8px;padding:9px 14px;background:var(--surf3);border-bottom:1px solid var(--bdr);}
+.pay-store-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0;}
+.pay-store-name{font-size:12px;font-weight:700;color:var(--txt);}
+.pay-store-tot{margin-left:auto;font-family:'Space Grotesk',sans-serif;font-size:13px;font-weight:700;color:var(--txt);}
+.pay-store-list{padding:0 14px;}
+.pay-store-row{display:flex;align-items:center;gap:10px;padding:9px 0;border-bottom:1px solid var(--bdr);}
+.pay-store-row:last-child{border-bottom:none;}
+.pay-store-icon{width:28px;height:28px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0;}
+.pay-store-info{flex:1;min-width:0;}
+.pay-store-lbl{font-size:11px;font-weight:600;color:var(--txt);}
+.pay-store-bar{height:3px;background:var(--surf3);border-radius:2px;margin-top:4px;overflow:hidden;}
+.pay-store-bar-fill{height:3px;border-radius:2px;}
+.pay-store-right{text-align:right;flex-shrink:0;}
+.pay-store-amt{font-family:'Space Grotesk',sans-serif;font-size:13px;font-weight:700;color:var(--txt);}
+.pay-store-pct{font-size:10px;color:var(--txt3);margin-top:1px;}
+
+/* ── KPI GRID ONLINE (2 colonne, niente scroll) ── */
+.online-kpi-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:10px 16px 4px;}
+.okpi{background:var(--surf2);border:1px solid var(--bdr);border-radius:var(--r-l);padding:12px 14px;box-shadow:var(--shadow-1);}
+.okpi.accent{background:var(--acc-dim);border-color:rgba(124,110,247,.35);}
+.okpi.teal{background:rgba(0,212,184,.06);border-color:rgba(0,212,184,.25);}
+.okpi-lbl{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.7px;color:var(--txt3);margin-bottom:6px;}
+.okpi-val{font-family:'Space Grotesk',sans-serif;font-size:20px;font-weight:700;color:var(--txt);line-height:1;}
+.okpi-sub{font-size:10px;color:var(--txt3);margin-top:4px;}
+.okpi-delta{display:inline-flex;font-size:10px;font-weight:700;padding:2px 7px;border-radius:var(--r-full);margin-top:5px;}
+.okpi-delta.up{color:var(--green);background:var(--green-dim);}
+.okpi-delta.dn{color:var(--red);background:rgba(255,85,119,.12);}
+/* Card grande su tutta la larghezza per incasso totale */
+.okpi.full{grid-column:1/-1;display:flex;align-items:center;justify-content:space-between;}
+.okpi.full .okpi-val{font-size:26px;}
+
+/* ── CONTROLLO CASSE ── */
+.ctrl-header{padding:12px 16px 4px;}
+.ctrl-store-sel{display:flex;gap:6px;padding:8px 16px;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;}
+.ctrl-store-sel::-webkit-scrollbar{display:none;}
+.ctrl-store-chip{flex-shrink:0;height:30px;padding:0 12px;border-radius:var(--r-full);font-size:11px;font-weight:700;border:1.5px solid var(--bdr);background:var(--surf2);color:var(--txt3);cursor:pointer;display:flex;align-items:center;gap:5px;transition:all .15s;}
+.ctrl-store-chip.active{background:var(--acc-dim);border-color:rgba(124,110,247,.5);color:var(--acc);}
+.ctrl-cassa-sel{display:flex;gap:6px;padding:4px 16px 8px;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;}
+.ctrl-cassa-sel::-webkit-scrollbar{display:none;}
+.ctrl-cassa-chip{flex-shrink:0;height:28px;padding:0 12px;border-radius:var(--r-full);font-size:11px;font-weight:700;border:1.5px solid var(--bdr);background:var(--surf3);color:var(--txt3);cursor:pointer;transition:all .15s;}
+.ctrl-cassa-chip.active{background:var(--acc-dim);border-color:var(--acc);color:var(--acc);}
+.ctrl-cassa-chip.all{border-color:rgba(0,212,184,.4);color:var(--acc2);}
+.ctrl-cassa-chip.all.active{background:rgba(0,212,184,.1);}
+.ctrl-commands{padding:0 16px;display:flex;flex-direction:column;gap:8px;}
+.ctrl-cmd{background:var(--surf2);border:1px solid var(--bdr);border-radius:var(--r-xl);overflow:hidden;box-shadow:var(--shadow-1);}
+.ctrl-cmd-hd{display:flex;align-items:center;gap:12px;padding:14px 16px;cursor:pointer;transition:background .15s;}
+.ctrl-cmd-hd:active{background:var(--surf3);}
+.ctrl-cmd-icon{width:38px;height:38px;border-radius:var(--r-m);display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;}
+.ctrl-cmd-info{flex:1;}
+.ctrl-cmd-title{font-size:13px;font-weight:700;color:var(--txt);margin-bottom:2px;}
+.ctrl-cmd-desc{font-size:11px;color:var(--txt3);}
+.ctrl-cmd-arrow{color:var(--txt3);flex-shrink:0;}
+.ctrl-cmd-btn{margin:0 16px 14px;height:40px;border-radius:var(--r-l);border:none;font-family:'Nunito Sans',sans-serif;font-size:13px;font-weight:700;cursor:pointer;width:calc(100% - 32px);display:flex;align-items:center;justify-content:center;gap:8px;transition:all .15s;}
+.ctrl-cmd-btn:active{transform:scale(.97);}
+.ctrl-cmd-btn.primary{background:var(--acc);color:#fff;box-shadow:0 0 16px rgba(124,110,247,.35);}
+.ctrl-cmd-btn.danger{background:rgba(255,85,119,.15);border:1.5px solid rgba(255,85,119,.4);color:var(--red);}
+.ctrl-cmd-btn.warning{background:rgba(255,194,71,.12);border:1.5px solid rgba(255,194,71,.4);color:var(--acc4);}
+.ctrl-cmd-btn.info{background:rgba(0,212,184,.1);border:1.5px solid rgba(0,212,184,.35);color:var(--acc2);}
+.ctrl-result{margin:0 16px 14px;background:var(--surf3);border:1px solid var(--bdr);border-radius:var(--r-l);padding:12px 14px;display:none;}
+.ctrl-result.show{display:block;}
+.ctrl-result-title{font-size:11px;font-weight:700;color:var(--txt3);text-transform:uppercase;letter-spacing:.8px;margin-bottom:8px;}
+.ctrl-result-row{display:flex;align-items:center;justify-content:space-between;padding:6px 0;border-bottom:1px solid var(--bdr);}
+.ctrl-result-row:last-child{border-bottom:none;}
+.ctrl-result-lbl{font-size:12px;color:var(--txt);}
+.ctrl-result-val{font-family:'Space Grotesk',sans-serif;font-size:12px;font-weight:700;}
+.ctrl-result-badge{font-size:10px;font-weight:700;padding:2px 8px;border-radius:var(--r-full);}
+.ctrl-result-badge.ok{background:var(--green-dim);color:var(--green);}
+.ctrl-result-badge.warn{background:rgba(255,194,71,.15);color:var(--acc4);}
+.ctrl-result-badge.err{background:rgba(255,85,119,.12);color:var(--red);}
+.ctrl-log{margin:0 16px 14px;background:rgba(13,15,20,.8);border:1px solid var(--bdr);border-radius:var(--r-l);padding:10px 12px;font-family:'Noto Sans Mono',monospace;font-size:10px;color:var(--acc2);display:none;max-height:120px;overflow-y:auto;}
+.ctrl-log.show{display:block;}
+.ctrl-log-line{margin-bottom:3px;opacity:.85;}
+.ctrl-log-line.ok{color:var(--green);}
+.ctrl-log-line.err{color:var(--red);}
+.ctrl-log-line.warn{color:var(--acc4);}
+.ctrl-status-bar{display:flex;align-items:center;gap:6px;padding:6px 16px 10px;font-size:11px;color:var(--txt3);}
+.ctrl-status-dot{width:6px;height:6px;border-radius:50%;background:var(--green);animation:pulse 2s infinite;}
 </style>
 </head>
 <body>
@@ -1160,6 +1294,11 @@ body{color:var(--txt);font-family:'Nunito Sans',sans-serif;font-size:14px;-webki
     <span class="store-badge-txt" id="store-badge-txt">Nessun negozio</span>
   </div>
 </div>
+  <div class="rt-ticker" id="rt-ticker">
+    <span class="rt-ticker-dot"></span>
+    <span class="rt-ticker-lbl">Live</span>
+    <div class="rt-ticker-stores" id="rt-stores">—</div>
+  </div>
   <div class="hdr-actions">
     <div class="conn-dot"></div>
     <div class="ibtn" onclick="openFilter()">
@@ -1185,30 +1324,6 @@ body{color:var(--txt);font-family:'Nunito Sans',sans-serif;font-size:14px;-webki
 
 <div class="scroll-area" id="SA">
 
-<!-- OVERVIEW -->
-<section class="sec active" id="sec-overview">
-  
-  <div class="sec-extras"><div class="pchip compare" onclick="toggleCmp()">⇄ Confronto</div></div>
-  <div class="cmp-banner" id="cmpb">
-    <svg width="14" height="14" fill="none" stroke="var(--acc3)" viewBox="0 0 24 24"><path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
-    <span style="color:var(--acc3)">Confronto:</span>&nbsp;stesso periodo anno prec.
-  </div>
-  <div class="kpi-scroll">
-    <div class="kcard g" id="kpi-inc"><div class="klbl">Incasso</div><div class="kval">€2.84M</div><div class="kdelta up">▲ 12.4%</div></div>
-    <div class="kcard o" id="kpi-tx"><div class="klbl">Transazioni</div><div class="kval">48.391</div><div class="kdelta up">▲ 8.2%</div></div>
-    <div class="kcard p" id="kpi-med"><div class="klbl">Scontrino Medio</div><div class="kval">€58.70</div><div class="kdelta up">▲ 3.9%</div></div>
-    <div class="kcard y" id="kpi-art"><div class="klbl">Articoli</div><div class="kval">312.8K</div><div class="kdelta down">▼ 1.2%</div></div>
-  </div>
-  <div class="card">
-    <div class="card-hd"><div><div class="card-title">Andamento Vendite</div><div class="card-sub">Incasso giornaliero</div></div><div class="cbadge">vs 2024</div></div>
-    <div class="chart-wrap"><canvas id="ct" height="180"></canvas></div>
-  </div>
-  <div class="card">
-    <div class="card-hd"><div><div class="card-title">Media Settimanale</div><div class="card-sub">Per giorno della settimana</div></div></div>
-    <div class="chart-wrap"><canvas id="cw" height="160"></canvas></div>
-  </div>
-</section>
-
 <!-- PAGAMENTI -->
 <section class="sec" id="sec-pagamenti">
   
@@ -1218,17 +1333,13 @@ body{color:var(--txt);font-family:'Nunito Sans',sans-serif;font-size:14px;-webki
       <div class="kval" id="kpi-pag-tot-val" style="color:var(--acc);font-size:18px;margin-top:6px;">—</div>
       <div class="kdelta" id="kpi-pag-tot-delta" style="margin-top:5px;">—</div>
     </div>
-    <div class="kpi-scroll" style="flex:1;padding:0;">
-      <div class="kcard g"><div class="klbl">Contanti</div><div class="kval">€892K</div><div class="kdelta down">▼ 5.1%</div></div>
-      <div class="kcard b"><div class="klbl">Carte</div><div class="kval">€1.62M</div><div class="kdelta up">▲ 18.3%</div></div>
-      <div class="kcard p"><div class="klbl">App & Wallet</div><div class="kval">€248K</div><div class="kdelta up">▲ 34.7%</div></div>
-      <div class="kcard y"><div class="klbl">Voucher</div><div class="kval">€82K</div><div class="kdelta up">▲ 2.1%</div></div>
-    </div>
   </div>
   <div class="card">
-    <div class="card-hd"><div class="card-title">Dettaglio Forme Pagamento</div></div>
+    <div class="card-hd"><div class="card-title">Dettaglio Forme Pagamento Tutti i Negozi</div></div>
     <div class="pay-list" id="pay-list"></div>
   </div>
+  <div style="margin-top:4px;padding:0 16px 2px"><div style="font-size:11px;font-weight:700;color:var(--txt3);text-transform:uppercase;letter-spacing:.8px">Per Negozio</div></div>
+  <div id="pay-stores-list"></div>
   <div class="card">
     <div class="card-hd"><div class="card-title">Ripartizione %</div><div class="cbadge">Donut</div></div>
     <div class="chart-wrap"><canvas id="cpd" height="200"></canvas></div>
@@ -1239,14 +1350,140 @@ body{color:var(--txt);font-family:'Nunito Sans',sans-serif;font-size:14px;-webki
   </div>
 </section>
 
+<!-- CONTROLLO CASSE -->
+<section class="sec" id="sec-ctrl">
+
+  <!-- Status bar -->
+  <div class="ctrl-status-bar">
+    <span class="ctrl-status-dot"></span>
+    <span id="ctrl-status-txt">Seleziona negozio e cassa per inviare comandi</span>
+  </div>
+
+  <!-- Selezione negozio -->
+  <div style="padding:0 16px 2px"><div style="font-size:10px;font-weight:700;color:var(--txt3);text-transform:uppercase;letter-spacing:.8px">Negozio</div></div>
+  <div class="ctrl-store-sel" id="ctrl-store-sel"></div>
+
+  <!-- Selezione cassa -->
+  <div style="padding:0 16px 2px"><div style="font-size:10px;font-weight:700;color:var(--txt3);text-transform:uppercase;letter-spacing:.8px">Cassa</div></div>
+  <div class="ctrl-cassa-sel" id="ctrl-cassa-sel">
+    <div class="ctrl-cassa-chip all active" onclick="ctrlSelCassa('TUTTE',this)">Tutte</div>
+  </div>
+
+  <!-- Comandi -->
+  <div class="ctrl-commands">
+
+    <!-- 1. Sblocca chiave supervisore -->
+    <div class="ctrl-cmd" id="cmd-supervisor">
+      <div class="ctrl-cmd-hd">
+        <div class="ctrl-cmd-icon" style="background:rgba(124,110,247,.15)">🔑</div>
+        <div class="ctrl-cmd-info">
+          <div class="ctrl-cmd-title">Sblocca Chiave Supervisore</div>
+          <div class="ctrl-cmd-desc">Invia autorizzazione supervisore alla cassa selezionata</div>
+        </div>
+      </div>
+      <button class="ctrl-cmd-btn primary" onclick="ctrlCmd('supervisor')">
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        Invia Sblocco
+      </button>
+      <div class="ctrl-log" id="log-supervisor"></div>
+    </div>
+
+    <!-- 2. Check differenze anagrafiche articoli -->
+    <div class="ctrl-cmd" id="cmd-anagrafica">
+      <div class="ctrl-cmd-hd">
+        <div class="ctrl-cmd-icon" style="background:rgba(0,212,184,.12)">🔍</div>
+        <div class="ctrl-cmd-info">
+          <div class="ctrl-cmd-title">Check Anagrafica Articoli</div>
+          <div class="ctrl-cmd-desc">Verifica differenze su numero articoli, prezzi e promozioni</div>
+        </div>
+      </div>
+      <button class="ctrl-cmd-btn info" onclick="ctrlCmd('anagrafica')">
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
+        Avvia Check
+      </button>
+      <div class="ctrl-result" id="result-anagrafica"></div>
+    </div>
+
+    <!-- 3. Chiusura cassa (X di giornata) -->
+    <div class="ctrl-cmd" id="cmd-chiusura">
+      <div class="ctrl-cmd-hd">
+        <div class="ctrl-cmd-icon" style="background:rgba(255,194,71,.12)">🖨️</div>
+        <div class="ctrl-cmd-info">
+          <div class="ctrl-cmd-title">Chiusura Fiscale (X)</div>
+          <div class="ctrl-cmd-desc">Stampa report X di giornata sulla cassa selezionata</div>
+        </div>
+      </div>
+      <button class="ctrl-cmd-btn warning" onclick="ctrlCmd('chiusura')">
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 01-2-2v-5a2 2 0 012-2h16a2 2 0 012 2v5a2 2 0 01-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+        Stampa Report X
+      </button>
+      <div class="ctrl-log" id="log-chiusura"></div>
+    </div>
+
+    <!-- 4. Reset drawer / apertura cassetto -->
+    <div class="ctrl-cmd" id="cmd-cassetto">
+      <div class="ctrl-cmd-hd">
+        <div class="ctrl-cmd-icon" style="background:rgba(56,189,248,.12)">💰</div>
+        <div class="ctrl-cmd-info">
+          <div class="ctrl-cmd-title">Apri Cassetto</div>
+          <div class="ctrl-cmd-desc">Invia comando di apertura cassetto contanti</div>
+        </div>
+      </div>
+      <button class="ctrl-cmd-btn info" style="background:rgba(56,189,248,.1);border-color:rgba(56,189,248,.4);color:#38bdf8" onclick="ctrlCmd('cassetto')">
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/></svg>
+        Apri Cassetto
+      </button>
+      <div class="ctrl-log" id="log-cassetto"></div>
+    </div>
+
+    <!-- 5. Sospendi / Riprendi cassa -->
+    <div class="ctrl-cmd" id="cmd-sospendi">
+      <div class="ctrl-cmd-hd">
+        <div class="ctrl-cmd-icon" style="background:rgba(255,85,119,.1)">⏸️</div>
+        <div class="ctrl-cmd-info">
+          <div class="ctrl-cmd-title">Sospendi / Riattiva Cassa</div>
+          <div class="ctrl-cmd-desc">Metti in pausa o riattiva operatività della cassa</div>
+        </div>
+      </div>
+      <div style="display:flex;gap:8px;margin:0 16px 14px">
+        <button class="ctrl-cmd-btn danger" style="flex:1;margin:0" onclick="ctrlCmd('sospendi')">⏸ Sospendi</button>
+        <button class="ctrl-cmd-btn primary" style="flex:1;margin:0;background:var(--green-dim);color:var(--green);box-shadow:none;border:1.5px solid rgba(0,224,160,.3)" onclick="ctrlCmd('riattiva')">▶ Riattiva</button>
+      </div>
+      <div class="ctrl-log" id="log-sospendi"></div>
+    </div>
+
+    <!-- 6. Sync listino prezzi -->
+    <div class="ctrl-cmd" id="cmd-sync">
+      <div class="ctrl-cmd-hd">
+        <div class="ctrl-cmd-icon" style="background:rgba(167,139,250,.12)">🔄</div>
+        <div class="ctrl-cmd-info">
+          <div class="ctrl-cmd-title">Sincronizza Listino Prezzi</div>
+          <div class="ctrl-cmd-desc">Forza aggiornamento prezzi e promozioni dal server centrale</div>
+        </div>
+      </div>
+      <button class="ctrl-cmd-btn primary" style="background:rgba(167,139,250,.2);color:#a78bfa;box-shadow:none;border:1.5px solid rgba(167,139,250,.35)" onclick="ctrlCmd('sync')">
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M23 4v6h-6M1 20v-6h6M3.51 9a9 9 0 0114.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0020.49 15"/></svg>
+        Avvia Sincronizzazione
+      </button>
+      <div class="ctrl-log" id="log-sync"></div>
+    </div>
+
+  </div>
+</section>
+
 <!-- FASCE ORARIE -->
 <section class="sec" id="sec-fasce">
   
-  <div class="kpi-scroll">
-    <div class="kcard g"><div class="klbl">Peak</div><div class="kval">11:00</div><div class="kdelta up">▲ Picco</div></div>
-    <div class="kcard o"><div class="klbl">Media/Ora</div><div class="kval">€21.4K</div><div class="kdelta up">▲ 6.8%</div></div>
-    <div class="kcard p"><div class="klbl">Ore Attive</div><div class="kval">14 h</div><div class="kdelta n">07–21</div></div>
+  <!-- KPI globali -->
+  <div class="kpi-scroll" id="f-kpi-global">
+    <div class="kcard g"><div class="klbl">Picco</div><div class="kval" id="f-peak">11:00</div><div class="kdelta up" id="f-peak-d">▲ Ora di punta</div></div>
+    <div class="kcard y"><div class="klbl">Min. Affluenza</div><div class="kval" id="f-min">07:00</div><div class="kdelta n" id="f-min-d">↓ Minimo</div></div>
+    <div class="kcard o"><div class="klbl">Media/Ora</div><div class="kval" id="f-media">€21.4K</div><div class="kdelta up" id="f-media-d">▲ 6.8%</div></div>
+    <div class="kcard p"><div class="klbl">Ore Attive</div><div class="kval" id="f-ore">14 h</div><div class="kdelta n" id="f-ore-d">07–21</div></div>
+    <div class="kcard b"><div class="klbl">Transazioni</div><div class="kval" id="f-tx">—</div><div class="kdelta n" id="f-tx-d">totale</div></div>
   </div>
+  <!-- KPI per negozio -->
+  <div id="f-kpi-stores"></div>
   <div class="card">
     <div class="card-hd"><div class="card-title">Scontrini per Ora</div><div class="cbadge">N. Transazioni</div></div>
     <div class="chart-wrap"><canvas id="ch" height="180"></canvas></div>
@@ -1274,15 +1511,19 @@ body{color:var(--txt);font-family:'Nunito Sans',sans-serif;font-size:14px;-webki
   </div>
 </section>
 
+<!-- ONLINE -->
+<section class="sec active" id="sec-online">
+  <div class="online-kpi-grid" id="online-kpi-scroll"></div>
+  <div class="online-list" id="online-list"></div>
+  <div class="card" style="margin-top:8px">
+    <div class="card-hd"><div class="card-title">Incasso Online per Negozio</div><div class="cbadge">Bar</div></div>
+    <div class="chart-wrap"><canvas id="conline" height="200"></canvas></div>
+  </div>
+</section>
+
 <!-- CORRISPETTIVI -->
 <section class="sec" id="sec-corrispettivi">
   
-  <div class="kpi-scroll">
-    <div class="kcard g"><div class="klbl">Totale Lordo</div><div class="kval">€2.84M</div><div class="kdelta up">▲ 12.4%</div></div>
-    <div class="kcard o"><div class="klbl">IVA 22%</div><div class="kval">€184K</div><div class="kdelta up">▲ 9.1%</div></div>
-    <div class="kcard p"><div class="klbl">IVA 10%</div><div class="kval">€143K</div><div class="kdelta up">▲ 14.2%</div></div>
-    <div class="kcard y"><div class="klbl">IVA 4%</div><div class="kval">€68K</div><div class="kdelta down">▼ 2.3%</div></div>
-  </div>
   <div class="corr-list" id="corr-list"></div>
   <div class="card" style="margin-top:8px">
     <div class="card-hd"><div class="card-title">Andamento Aliquote IVA</div><div class="cbadge">Line</div></div>
@@ -1805,9 +2046,9 @@ body{color:var(--txt);font-family:'Nunito Sans',sans-serif;font-size:14px;-webki
 <!-- TAB BAR -->
 <nav class="tab-bar" id="main-tab-bar">
 <div class="tab-bar-scroll" id="tab-bar-scroll">
-  <div class="tab-item active" onclick="gotoSec('overview',this)">
-    <div class="tab-icon"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg></div>
-    <div class="tab-lbl">Overview</div>
+  <div class="tab-item active" onclick="gotoSec('online',this)">
+    <div class="tab-icon"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
+    <div class="tab-lbl">Online</div>
   </div>
   <div class="tab-item" onclick="gotoSec('pagamenti',this)">
     <div class="tab-icon"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg></div>
@@ -1849,9 +2090,15 @@ body{color:var(--txt);font-family:'Nunito Sans',sans-serif;font-size:14px;-webki
     <div class="tab-icon"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-2 2 2 2 0 01-2-2v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83-2.83l.06-.06A1.65 1.65 0 004.68 15a1.65 1.65 0 00-1.51-1H3a2 2 0 01-2-2 2 2 0 012-2h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 012.83-2.83l.06.06A1.65 1.65 0 009 4.68a1.65 1.65 0 001-1.51V3a2 2 0 012-2 2 2 0 012 2v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 2.83l-.06.06A1.65 1.65 0 0019.4 9a1.65 1.65 0 001.51 1H21a2 2 0 012 2 2 2 0 01-2 2h-.09a1.65 1.65 0 00-1.51 1z"/></svg></div>
     <div class="tab-lbl">Impost.</div>
   </div>
+  <div class="tab-item" onclick="gotoSec('ctrl',this)">
+    <div class="tab-icon"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/><circle cx="12" cy="10" r="2"/><path d="M7 10h2M15 10h2"/></svg></div>
+    <div class="tab-lbl">Ctrl Casse</div>
+  </div>
   </div>
 </nav>
 
+<!-- TRIPLE TAP TOAST -->
+<div class="triple-toast" id="triple-toast">📱 Modalità finestra</div>
 
 <!-- DRAWER FILTRI SCONTRINI -->
 <div class="ov-bkg" id="sfov" onclick="closeScoFilter()"></div>
@@ -2094,7 +2341,7 @@ const C={acc:'#7c6ef7',acc2:'#00d4b8',acc3:'#ff6b8a',acc4:'#ffc247',blue:'#60b4f
 const grid={color:'rgba(62,40,32,.6)'};
 Chart.defaults.color='#a89488';
 Chart.defaults.font={family:"'DM Mono', monospace",size:10};
-let CH={},cur='overview',ws=1,dbType='mssql',artMode='revenue';
+let CH={},cur='online',ws=1,dbType='mssql',artMode='revenue';
 const D=id=>document.getElementById(id);
 function dc(id){if(CH[id]){CH[id].destroy();delete CH[id];}}
 
@@ -2171,7 +2418,7 @@ function aggBase(key, period){
 }
 
 // Periodo corrente selezionato per sezione
-const CUR_PERIOD={overview:'Oggi',pagamenti:'Oggi',fasce:'Oggi',corrispettivi:'Oggi',casse:'Oggi',articoli:'Oggi',reparti:'Oggi',promo:'Oggi',cassieri:'Oggi',scontrini:'Oggi'};
+const CUR_PERIOD={overview:'Oggi',ctrl:'Oggi',pagamenti:'Oggi',fasce:'Oggi',corrispettivi:'Oggi',casse:'Oggi',articoli:'Oggi',reparti:'Oggi',promo:'Oggi',cassieri:'Oggi',scontrini:'Oggi'};
 let GLOBAL_PERIOD='Oggi';
 
 // Funzione global period chip
@@ -2184,7 +2431,7 @@ function gpc(el){
   Object.keys(CUR_PERIOD).forEach(k=>{ CUR_PERIOD[k]=p; });
   // Aggiorna SF.period per scontrini
   if(typeof SF!=='undefined') SF.period=p;
-  setTimeout(()=>render(cur),80);
+  setTimeout(()=>{render(cur);updateRTTicker();},80);
 }
 
 function pc(el,sec){
@@ -2303,6 +2550,7 @@ function confirmStore(){
   D('store-overlay').style.display='none';
   updateStoreBadge();
   render(cur);
+  updateRTTicker();
 }
 
 function updateStoreBadge(){
@@ -2323,6 +2571,7 @@ function closeStorePanel(){
   D('store-panel').style.display='none';
   updateStoreBadge();
   render(cur);
+  updateRTTicker();
 }
 
 // NAV
@@ -2330,6 +2579,15 @@ function gotoSec(id,tab){
   document.querySelectorAll('.sec').forEach(s=>s.classList.remove('active'));
   D('sec-'+id).classList.add('active');
   D('SA').scrollTop=0;
+  // Nascondi period bar globale nella sezione Online (non ha filtro periodo)
+  const gpb=D('global-period-bar'), sa=D('SA');
+  if(id==='online'||id==='ctrl'){
+    gpb.style.display='none';
+    sa.style.top='calc(var(--st) + 58px)';
+  } else {
+    gpb.style.display='flex';
+    sa.style.top='calc(var(--st) + 58px + 44px)';
+  }
   if(tab){
     document.querySelectorAll('.tab-item').forEach(t=>t.classList.remove('active'));
     tab.classList.add('active');
@@ -2341,9 +2599,10 @@ function gotoSec(id,tab){
 }
 
 function render(id){
-  if(id==='overview')rOv();
-  else if(id==='pagamenti')rPag();
+  if(id==='pagamenti')rPag();
   else if(id==='fasce')rFasce();
+  else if(id==='online')rOnline();
+  else if(id==='ctrl'){rCtrl();}
   else if(id==='corrispettivi')rCorr();
   else if(id==='casse')rCasse();
   else if(id==='articoli')rArt();
@@ -2446,6 +2705,55 @@ function rPag(){
       <div class="pay-right"><div class="pamt">${fEur(pp.amt)}</div><div class="ptx">${pp.tx.toLocaleString('it')} tx</div></div>
     </div>`).join('');
 
+  // ── Dettaglio per negozio ──────────────────────────────────
+  var activeList=ACTIVE_STORES.length>0?STORES.filter(function(s){return ACTIVE_STORES.includes(s.id);}):STORES;
+  var totScale=activeList.reduce(function(a,s){return a+s.scale;},0)||1;
+  var payStoresHtml='';
+  for(var si=0;si<activeList.length;si++){
+    var st=activeList[si];
+    var sf=st.scale/totScale; // quota di questo negozio sul totale
+    var stCash=Math.round(cash*sf);
+    var stCarta=Math.round(carta*sf);
+    var stBan=Math.round(ban*sf);
+    var stApp=Math.round(app*sf);
+    var stVou=Math.round(vou*sf);
+    var stTot=stCash+stCarta+stBan+stApp+stVou;
+    var spct=function(v){return stTot>0?Math.round(v/stTot*1000)/10:0;};
+    var stPays=[
+      {icon:'💵',name:'Contanti',  amt:stCash, color:C.acc},
+      {icon:'💳',name:'Carta',     amt:stCarta,color:C.blue},
+      {icon:'🏦',name:'Bancomat',  amt:stBan,  color:C.teal},
+      {icon:'📱',name:'App/Wallet',amt:stApp,  color:C.acc3},
+      {icon:'🎫',name:'Voucher',   amt:stVou,  color:C.acc4},
+    ];
+    var rowsHtml='';
+    for(var pi=0;pi<stPays.length;pi++){
+      var pp=stPays[pi];
+      var pP=spct(pp.amt);
+      rowsHtml+='<div class="pay-store-row">'
+        +'<div class="pay-store-icon" style="background:'+pp.color+'22">'+pp.icon+'</div>'
+        +'<div class="pay-store-info">'
+        +'<div class="pay-store-lbl">'+pp.name+'</div>'
+        +'<div class="pay-store-bar"><div class="pay-store-bar-fill" style="width:'+pP+'%;background:'+pp.color+'"></div></div>'
+        +'</div>'
+        +'<div class="pay-store-right">'
+        +'<div class="pay-store-amt">'+fEur(pp.amt)+'</div>'
+        +'<div class="pay-store-pct">'+pP+'%</div>'
+        +'</div>'
+        +'</div>';
+    }
+    payStoresHtml+='<div class="pay-store-card">'
+      +'<div class="pay-store-hd">'
+      +'<span class="pay-store-dot" style="background:'+st.color+'"></span>'
+      +'<span class="pay-store-name">'+st.emoji+' '+st.name+'</span>'
+      +'<span class="pay-store-tot">'+fEur(stTot)+'</span>'
+      +'</div>'
+      +'<div class="pay-store-list">'+rowsHtml+'</div>'
+      +'</div>';
+  }
+  var el=D('pay-stores-list');
+  if(el) el.innerHTML=payStoresHtml;
+
   // Trend mensile stacked — ultimi 12 mesi
   const mesi12=Array.from({length:12},(_,i)=>`2025-${String(i+1).padStart(2,'0')}`);
   CH['cpt']=new Chart(D('cpt'),{type:'bar',data:{labels:MESI,datasets:[
@@ -2461,21 +2769,89 @@ function rFasce(){
   dc('ch');dc('chr');
   buildHM();
   const hrs=Array.from({length:14},(_,i)=>`${7+i}:00`);
-  // Profilo realistico: picco 11-12, secondo picco 18-19
-  const baseRaw=[28,62,138,198,284,342,298,248,172,148,192,220,168,82];
   const p=CUR_PERIOD.fasce;
-  const factor=p==='Weekend'?1.38:p==='Settimana'?1.0:p==='Oggi'?1.0:1.0;
-  const cnt=baseRaw.map(v=>Math.round(v*factor));
-  const mx=Math.max(...cnt);
-  CH['ch']=new Chart(D('ch'),{type:'bar',data:{labels:hrs,datasets:[
-    {data:cnt,backgroundColor:cnt.map(v=>v>=mx*.9?C.acc:v>=mx*.6?'rgba(212,67,50,.55)':'rgba(212,67,50,.22)'),borderRadius:4}
-  ]},options:{responsive:true,maintainAspectRatio:false,scales:{x:{grid:{display:false}},y:{grid,ticks:{maxTicksLimit:5}}},plugins:{legend:{display:false}}}});
 
-  // Scala i rev in base al periodo
+  // Factor per profilo giornaliero basato sul periodo
+  const factor=p==='Weekend'?1.38:p==='Settimana'?1.0:p==='Oggi'?1.0:1.0;
+
+  // Profilo transazioni per ora (pesi relativi, picco 11-12 e 18-19)
+  const baseRaw=[28,62,138,198,284,342,298,248,172,148,192,220,168,82];
+  const cnt=baseRaw.map(v=>Math.round(v*factor));
+
+  // Scala per negozi attivi e periodo
   const fasceBase=agg('incasso',p||'Oggi');
   const revNorm=[4.2,11.4,28.8,44.2,68.4,92.8,76.4,62.2,42.8,36.4,46.8,54.2,40.2,18.4];
   const revTot=revNorm.reduce((s,v)=>s+v,0);
   const rev=revNorm.map(v=>Math.round(v/revTot*fasceBase*factor));
+
+  // ── KPI dinamiche ──────────────────────────────────────────
+  const mx=Math.max(...cnt);
+  const mn=Math.min(...cnt);
+  // Picco: ora con più transazioni
+  const peakIdx=cnt.indexOf(mx);
+  const peakHr=hrs[peakIdx];
+  // Minima affluenza: ora con meno transazioni
+  const minIdx=cnt.indexOf(mn);
+  const minHr=hrs[minIdx];
+  // Ore attive: ore con cnt > 10% del massimo
+  const oreAttive=cnt.filter(v=>v>mx*0.1).length;
+  const oraStart=hrs[cnt.findIndex(v=>v>mx*0.1)];
+  const oraEnd=hrs[cnt.length-1-[...cnt].reverse().findIndex(v=>v>mx*0.1)];
+  // Media/ora: incasso totale / ore attive
+  const mediaOra=oreAttive>0?Math.round(fasceBase/oreAttive):0;
+  const fasceBasePrev=prevYear('incasso',p||'Oggi');
+  const mediaOraPrev=oreAttive>0?Math.round(fasceBasePrev/oreAttive):0;
+  const mediaDelta=mediaOraPrev>0?delta(mediaOra,mediaOraPrev):{s:'—',up:true};
+
+  // Aggiorna KPI globali
+  const set=(id,v)=>{const e=D(id);if(e)e.textContent=v;};
+  set('f-peak',   peakHr);
+  set('f-peak-d', '▲ Ora di punta');
+  set('f-min',    minHr);
+  set('f-min-d',  '↓ Minima affluenza');
+  set('f-media',  fEur(mediaOra));
+  set('f-media-d', mediaDelta.s);
+  if(D('f-media-d')) D('f-media-d').className='kdelta '+(mediaDelta.up?'up':'down');
+  set('f-ore',    oreAttive+' h');
+  set('f-ore-d',  oraStart+'–'+oraEnd);
+  const totTxFasce=agg('tx',p||'Oggi');
+  set('f-tx', fNum(totTxFasce));
+  set('f-tx-d', 'periodo selezionato');
+
+  // ── KPI per singolo negozio ──────────────────────────────
+  const activeList=ACTIVE_STORES.length>0?STORES.filter(s=>ACTIVE_STORES.includes(s.id)):STORES;
+  const storesEl=D('f-kpi-stores');
+  if(storesEl){
+    storesEl.innerHTML=activeList.map(function(st){
+      const stBase=Math.round(aggBase('incasso',p||'Oggi')*st.scale);
+      const stMediaOra=oreAttive>0?Math.round(stBase/oreAttive):0;
+      const stTx=Math.round(aggBase('tx',p||'Oggi')*st.scale);
+      const stCnt=baseRaw.map(function(v){return Math.round(v*factor*st.scale);});
+      const stMx=Math.max.apply(null,stCnt);
+      const stMn=Math.min.apply(null,stCnt);
+      const stPeakHr=hrs[stCnt.indexOf(stMx)];
+      const stMinHr=hrs[stCnt.indexOf(stMn)];
+      const stOreAtt=stCnt.filter(function(v){return v>stMx*0.1;}).length;
+      return '<div class="f-store-row">'
+        +'<div class="f-store-row-hd">'
+        +'<span class="f-store-row-dot" style="background:'+st.color+'"></span>'
+        +'<span class="f-store-row-name">'+st.emoji+' '+st.name+'</span>'
+        +'</div>'
+        +'<div class="f-store-kpis">'
+        +'<div class="f-store-kpi"><div class="f-store-kpi-lbl">Picco</div><div class="f-store-kpi-val" style="color:'+st.color+'">'+stPeakHr+'</div></div>'
+        +'<div class="f-store-kpi"><div class="f-store-kpi-lbl">Min. Affluenza</div><div class="f-store-kpi-val">'+stMinHr+'</div></div>'
+        +'<div class="f-store-kpi"><div class="f-store-kpi-lbl">Media/Ora</div><div class="f-store-kpi-val">'+fEur(stMediaOra)+'</div></div>'
+        +'<div class="f-store-kpi"><div class="f-store-kpi-lbl">Ore Attive</div><div class="f-store-kpi-val">'+stOreAtt+' h</div></div>'
+        +'<div class="f-store-kpi"><div class="f-store-kpi-lbl">Incasso tot.</div><div class="f-store-kpi-val">'+fEur(stBase)+'</div></div>'
+        +'<div class="f-store-kpi"><div class="f-store-kpi-lbl">Transazioni</div><div class="f-store-kpi-val">'+fNum(stTx)+'</div></div>'
+        +'</div>'
+        +'</div>';
+    }).join('');
+  }
+  CH['ch']=new Chart(D('ch'),{type:'bar',data:{labels:hrs,datasets:[
+    {data:cnt,backgroundColor:cnt.map(v=>v>=mx*.9?C.acc:v>=mx*.6?'rgba(212,67,50,.55)':'rgba(212,67,50,.22)'),borderRadius:4}
+  ]},options:{responsive:true,maintainAspectRatio:false,scales:{x:{grid:{display:false}},y:{grid,ticks:{maxTicksLimit:5}}},plugins:{legend:{display:false}}}});
+
   CH['chr']=new Chart(D('chr'),{type:'line',data:{labels:hrs,datasets:[{data:rev,borderColor:C.acc3,backgroundColor:'rgba(124,110,242,.10)',borderWidth:2,fill:true,tension:.45,pointRadius:3,pointBackgroundColor:C.acc3}]},options:{responsive:true,maintainAspectRatio:false,scales:{x:{grid:{display:false}},y:{grid,ticks:{callback:v=>fEur(v)}}},plugins:{legend:{display:false}}}});
 }
 
@@ -2502,6 +2878,265 @@ function buildHM(){
     });
   });
   h+='</div>';w.innerHTML=h;
+}
+
+// ══ ONLINE ════════════════════════════════════════════════════
+function rOnline(){
+  dc('conline');
+  const p='Oggi'; // sezione Online sempre su oggi, nessun filtro periodo
+  // Usa solo negozi attivi (se nessuno selezionato, usa tutti)
+  const activeList=ACTIVE_STORES.length>0?STORES.filter(st=>ACTIVE_STORES.includes(st.id)):STORES;
+
+  // Incasso per negozio nel periodo selezionato
+  const storeData=activeList.map(st=>{
+    const inc=Math.round(aggBase('incasso',p)*st.scale);
+    const incP=Math.round(_prevBase('incasso',p)*st.scale);
+    const txv=Math.round(aggBase('tx',p)*st.scale);
+    const artv=Math.round(aggBase('articoli',p)*st.scale);
+    const d=delta(inc,incP);
+    return {...st,inc,incP,txv,artv,d};
+  });
+
+  // Aggregati totali
+  const totInc=storeData.reduce((s,st)=>s+st.inc,0);
+  const totIncP=storeData.reduce((s,st)=>s+st.incP,0);
+  const totTx=storeData.reduce((s,st)=>s+st.txv,0);
+  const totArt=storeData.reduce((s,st)=>s+st.artv,0);
+  const totD=delta(totInc,totIncP);
+  const medioSco=totTx>0?Math.round(totInc/totTx*100)/100:0;
+  const txElet=Math.round(totTx*0.62);
+  const txCont=Math.round(totTx*0.38);
+
+  // KPI griglia 2×3 — niente scroll laterale
+  const kpi=D('online-kpi-scroll');
+  if(kpi) kpi.innerHTML=''
+    // Riga 1: Incasso totale — card piena larghezza
+    +'<div class="okpi full accent">'
+    +'<div><div class="okpi-lbl">Incasso totale</div><div class="okpi-val">'+fEur(totInc)+'</div></div>'
+    +'<span class="okpi-delta '+(totD.up?'up':'dn')+'">'+totD.s+'</span>'
+    +'</div>'
+    // Riga 2: Scontrini | Scontrino medio
+    +'<div class="okpi">'
+    +'<div class="okpi-lbl">Scontrini</div>'
+    +'<div class="okpi-val">'+fNum(totTx)+'</div>'
+    +'<div class="okpi-sub">transazioni totali</div>'
+    +'</div>'
+    +'<div class="okpi">'
+    +'<div class="okpi-lbl">Scontrino medio</div>'
+    +'<div class="okpi-val">'+fEur(medioSco)+'</div>'
+    +'<div class="okpi-sub">per scontrino</div>'
+    +'</div>'
+    // Riga 3: N° Articoli | Tx elettronici
+    +'<div class="okpi">'
+    +'<div class="okpi-lbl">N° Articoli</div>'
+    +'<div class="okpi-val">'+fNum(totArt)+'</div>'
+    +'<div class="okpi-sub">venduti</div>'
+    +'</div>'
+    +'<div class="okpi">'
+    +'<div class="okpi-lbl">Tx elettronici</div>'
+    +'<div class="okpi-val">'+fNum(txElet)+'</div>'
+    +'<div class="okpi-sub">62% del totale</div>'
+    +'</div>'
+    // Riga 4: Tx contanti — card piena larghezza
+    +'<div class="okpi full teal">'
+    +'<div><div class="okpi-lbl">Tx contanti</div><div class="okpi-val" style="color:var(--acc2)">'+fNum(txCont)+'</div></div>'
+    +'<div class="okpi-sub" style="text-align:right">38% del totale<br><span style="font-size:11px;color:var(--txt2)">'+fNum(totTx)+' tot.</span></div>'
+    +'</div>';
+
+  // Lista negozi
+  const maxInc=Math.max(...storeData.map(s=>s.inc),1);
+  D('online-list').innerHTML=storeData.sort((a,b)=>b.inc-a.inc).map(st=>`
+    <div class="online-store-card">
+      <span class="online-store-dot" style="color:${st.color};background:${st.color}"></span>
+      <div class="online-store-info">
+        <div class="online-store-name">${st.emoji} ${st.name}</div>
+        <div class="online-store-addr">
+          <div style="height:3px;background:var(--surf3);border-radius:2px;margin-top:4px;overflow:hidden">
+            <div style="height:3px;background:${st.color};width:${Math.round(st.inc/maxInc*100)}%;border-radius:2px"></div>
+          </div>
+        </div>
+      </div>
+      <div class="online-store-right">
+        <div class="online-store-val">${fEur(st.inc)}</div>
+        <div class="online-store-pct"><span class="kdelta ${st.d.up?'up':'down'}" style="font-size:10px">${st.d.s}</span></div>
+      </div>
+    </div>`).join('');
+
+  // Grafico bar per negozio
+  CH['conline']=new Chart(D('conline'),{
+    type:'bar',
+    data:{
+      labels:storeData.map(s=>s.name.split('–')[0].trim()),
+      datasets:[{data:storeData.map(s=>s.inc),backgroundColor:storeData.map(s=>s.color+'cc'),borderRadius:8}]
+    },
+    options:{responsive:true,maintainAspectRatio:false,
+      scales:{x:{grid:{display:false}},y:{grid,ticks:{callback:v=>fEur(v),maxTicksLimit:5}}},
+      plugins:{legend:{display:false}}
+    }
+  });
+}
+
+// Aggiorna ticker realtime in topbar
+function updateRTTicker(){
+  const el=D('rt-stores'); if(!el) return;
+  const p='Oggi';
+  const items=STORES.map(st=>{
+    const inc=Math.round(aggBase('incasso',p)*st.scale);
+    return `<span class="rt-store-chip"><span style="display:inline-block;width:6px;height:6px;border-radius:50%;background:${st.color};margin-right:2px"></span>${st.emoji} <span style="color:${st.color}">${fEur(inc)}</span></span>`;
+  }).join('<span style="color:var(--bdr2);padding:0 4px">·</span>');
+  el.innerHTML=items;
+}
+
+// ══ CONTROLLO CASSE ═══════════════════════════════════════════
+let CTRL_STORE=null, CTRL_CASSA='TUTTE';
+
+// Lista casse per negozio
+const CASSE_MAP={
+  'S1':['C-01','C-02','C-03','SS-01','SS-02'],
+  'S2':['C-01','C-02','SS-01'],
+  'S3':['C-01','SS-01'],
+  'S4':['C-01','C-02','C-03','SS-01'],
+  'S5':['C-01','C-02','C-03','C-04','EX-01','SS-01']
+};
+
+function rCtrl(){
+  // Popola selezione negozi
+  var sel=D('ctrl-store-sel');
+  if(sel&&sel.children.length===0){
+    var stList=ACTIVE_STORES.length>0?STORES.filter(function(s){return ACTIVE_STORES.includes(s.id);}):STORES;
+    sel.innerHTML=stList.map(function(st){
+      var isAct=CTRL_STORE===st.id;
+      return '<div class="ctrl-store-chip'+(isAct?' active':'')+'" onclick="ctrlSelStore(\'' +st.id+ '\',this)" style="border-color:'+(isAct?st.color:'var(--bdr)')+'">'+st.emoji+' '+st.name.split('\u2013')[0].trim()+'</div>';
+    }).join('');
+  }
+}
+
+function ctrlSelStore(id, el){
+  CTRL_STORE=id;
+  CTRL_CASSA='TUTTE';
+  // Aggiorna chip negozi
+  document.querySelectorAll('.ctrl-store-chip').forEach(function(c){c.classList.remove('active');c.style.borderColor='var(--bdr)';});
+  var st=STORES.find(function(s){return s.id===id;});
+  el.classList.add('active');
+  el.style.borderColor=st?st.color:'var(--acc)';
+  // Aggiorna chip casse
+  var casseEl=D('ctrl-cassa-sel');
+  var casse=CASSE_MAP[id]||[];
+  casseEl.innerHTML='<div class="ctrl-cassa-chip all active" onclick="ctrlSelCassa(\'TUTTE\',this)">⚡ Tutte</div>'
+    +casse.map(function(c){return '<div class="ctrl-cassa-chip" onclick="ctrlSelCassa(\''+c+'\',this)">'+c+'</div>';}).join('');
+  // Aggiorna status
+  var stName=st?st.name.split('–')[0].trim():'?';
+  D('ctrl-status-txt').textContent='Negozio: '+stName+' · Cassa: Tutte';
+}
+
+function ctrlSelCassa(id, el){
+  CTRL_CASSA=id;
+  document.querySelectorAll('.ctrl-cassa-chip').forEach(function(c){c.classList.remove('active');});
+  el.classList.add('active');
+  if(CTRL_STORE){
+    var st=STORES.find(function(s){return s.id===CTRL_STORE;});
+    var stName=st?st.name.split('–')[0].trim():'?';
+    D('ctrl-status-txt').textContent='Negozio: '+stName+' · Cassa: '+id;
+  }
+}
+
+function _ctrlCheck(){
+  if(!CTRL_STORE){toast('Seleziona prima un negozio','error');return false;}
+  return true;
+}
+
+function _ctrlLog(logId, lines){
+  var el=D(logId); if(!el)return;
+  el.innerHTML=lines.map(function(l){
+    return '<div class="ctrl-log-line '+(l.type||'')+'">'+l.text+'</div>';
+  }).join('');
+  el.classList.add('show');
+}
+
+function ctrlCmd(cmd){
+  if(!_ctrlCheck())return;
+  var st=STORES.find(function(s){return s.id===CTRL_STORE;});
+  var stName=st?st.name.split('–')[0].trim():'Negozio';
+  var cassaTxt=CTRL_CASSA==='TUTTE'?'tutte le casse':'cassa '+CTRL_CASSA;
+  var ts=new Date().toLocaleTimeString('it-IT',{hour:'2-digit',minute:'2-digit',second:'2-digit'});
+
+  if(cmd==='supervisor'){
+    _ctrlLog('log-supervisor',[
+      {text:'['+ts+'] → Connessione a '+stName+'...'},
+      {text:'['+ts+'] → Invio token supervisore a '+cassaTxt+'...',type:''},
+      {text:'['+ts+'] ✓ Chiave supervisore sbloccata su '+cassaTxt,type:'ok'},
+      {text:'['+ts+'] ⏱ Timeout automatico: 5 minuti',type:'warn'}
+    ]);
+    toast('🔑 Supervisore sbloccato su '+cassaTxt,'success');
+  }
+
+  else if(cmd==='anagrafica'){
+    // Genera differenze simulate realistiche
+    var totArt=Math.round(8000+Math.random()*4000);
+    var diffNum=Math.round(Math.random()*15);
+    var diffPrz=Math.round(Math.random()*8);
+    var diffPrm=Math.round(Math.random()*5);
+    var diffRep=Math.round(Math.random()*3);
+    var totDiff=diffNum+diffPrz+diffPrm+diffRep;
+    var res=D('result-anagrafica'); if(!res)return;
+    res.classList.add('show');
+    var badge=function(n){return n===0?'<span class="ctrl-result-badge ok">✓ OK</span>':'<span class="ctrl-result-badge '+(n>5?'err':'warn')+'">△ '+n+'</span>';};
+    res.innerHTML='<div class="ctrl-result-title">📊 Report Anagrafica — '+stName+' · '+cassaTxt+'</div>'
+      +'<div class="ctrl-result-row"><span class="ctrl-result-lbl">Articoli in archivio</span><span class="ctrl-result-val">'+totArt.toLocaleString('it')+'</span></div>'
+      +'<div class="ctrl-result-row"><span class="ctrl-result-lbl">Differenze codici/numero</span>'+badge(diffNum)+'</div>'
+      +'<div class="ctrl-result-row"><span class="ctrl-result-lbl">Differenze prezzi</span>'+badge(diffPrz)+'</div>'
+      +'<div class="ctrl-result-row"><span class="ctrl-result-lbl">Differenze promozioni</span>'+badge(diffPrm)+'</div>'
+      +'<div class="ctrl-result-row"><span class="ctrl-result-lbl">Differenze reparto/IVA</span>'+badge(diffRep)+'</div>'
+      +'<div class="ctrl-result-row"><span class="ctrl-result-lbl" style="font-weight:700">Totale differenze</span><span class="ctrl-result-val" style="color:'+(totDiff===0?'var(--green)':totDiff>10?'var(--red)':'var(--acc4)')+'">'+totDiff+'</span></div>'
+      +(totDiff>0?'<div style="margin-top:8px;font-size:10px;color:var(--acc4)">⚠ Eseguire sincronizzazione listino per allineare le differenze</div>':'<div style="margin-top:8px;font-size:10px;color:var(--green)">✓ Anagrafica allineata</div>');
+    toast('🔍 Check completato: '+totDiff+' differenze trovate','success');
+  }
+
+  else if(cmd==='chiusura'){
+    _ctrlLog('log-chiusura',[
+      {text:'['+ts+'] → Connessione fiscale a '+stName+'...'},
+      {text:'['+ts+'] → Richiesta report X su '+cassaTxt+'...'},
+      {text:'['+ts+'] ✓ Stampa avviata — attendi ECR',type:'ok'},
+      {text:'['+ts+'] ℹ Totale giornata: '+fEur(agg('incasso','Oggi')),type:'warn'}
+    ]);
+    toast('🖨️ Stampa X avviata su '+cassaTxt,'success');
+  }
+
+  else if(cmd==='cassetto'){
+    _ctrlLog('log-cassetto',[
+      {text:'['+ts+'] → Apertura cassetto su '+cassaTxt+'...'},
+      {text:'['+ts+'] ✓ Comando APW inviato — cassetto aperto',type:'ok'}
+    ]);
+    toast('💰 Cassetto aperto','success');
+  }
+
+  else if(cmd==='sospendi'){
+    _ctrlLog('log-sospendi',[
+      {text:'['+ts+'] → Sospensione '+cassaTxt+' su '+stName+'...'},
+      {text:'['+ts+'] ✓ Cassa sospesa — operatività bloccata',type:'warn'},
+      {text:'['+ts+'] ℹ Usare "Riattiva" per riprendere',type:''}
+    ]);
+    toast('⏸ '+cassaTxt+' sospesa','success');
+  }
+
+  else if(cmd==='riattiva'){
+    _ctrlLog('log-sospendi',[
+      {text:'['+ts+'] → Riattivazione '+cassaTxt+' su '+stName+'...'},
+      {text:'['+ts+'] ✓ Cassa riattivata — operatività ripristinata',type:'ok'}
+    ]);
+    toast('▶ '+cassaTxt+' riattivata','success');
+  }
+
+  else if(cmd==='sync'){
+    _ctrlLog('log-sync',[
+      {text:'['+ts+'] → Connessione server centrale...'},
+      {text:'['+ts+'] → Download listino aggiornato...'},
+      {text:'['+ts+'] → Invio aggiornamento a '+cassaTxt+'...'},
+      {text:'['+ts+'] ✓ Sincronizzazione completata',type:'ok'},
+      {text:'['+ts+'] ✓ Prezzi, promo e reparti aggiornati',type:'ok'}
+    ]);
+    toast('🔄 Listino sincronizzato su '+cassaTxt,'success');
+  }
 }
 
 // ══ CORRISPETTIVI ═════════════════════════════════════════════
@@ -2563,60 +3198,71 @@ function rCorr(){
       up:deltaPct>=0
     });
   }
-  D('corr-list').innerHTML=corrRows.map(r=>{
-    const parts=r.label.split(' ');
-    const wd=parts[0], day=parts[1], mon=parts[2]||'';
-    return `<div class="corr-card${r.isWeekend?' we':''}">
+  // Costruisce HTML lista corrispettivi senza template literals annidati
+  var corrHtml='';
+  for(var ri=0;ri<corrRows.length;ri++){
+    var r=corrRows[ri];
+    var parts=r.label.split(' ');
+    var wd=parts[0],day=parts[1],mon=parts[2]||'';
+    var weClass=r.isWeekend?' we':'';
+    var deltaClass=r.up?'up':'dn';
 
-      <!-- Intestazione: data del giorno -->
-      <div class="corr-card-hd">
-        <div>
-          <span class="corr-card-date">${day} ${mon}</span>
-          <span class="corr-card-wd">${wd}${r.isWeekend?' · WE':''}</span>
-        </div>
-        <span class="corr-delta ${r.up?'up':'dn'}">${r.delta}</span>
-      </div>
+    // Calcola dati per negozio
+    var activeList2=ACTIVE_STORES.length>0?STORES.filter(function(s){return ACTIVE_STORES.includes(s.id);}):STORES;
+    var totScale=activeList2.reduce(function(a,s){return a+s.scale;},0)||1;
+    var storesHtml='';
+    for(var si=0;si<activeList2.length;si++){
+      var st=activeList2[si];
+      var stLordo=Math.round(r.lordo*st.scale/totScale);
+      var stNetto=Math.round(stLordo*.822);
+      var stIva=stLordo-stNetto;
+      var stE=Math.round(stLordo*.08),st4=Math.round(stLordo*.22),st10=Math.round(stLordo*.39),st22=Math.round(stLordo*.31);
+      storesHtml+='<div class="corr-store-row">'
+        +'<div class="corr-store-hd">'
+        +'<span class="corr-store-dot" style="background:'+st.color+'"></span>'
+        +'<span class="corr-store-name">'+st.emoji+' '+st.name+'</span>'
+        +'</div>'
+        +'<div class="corr-store-totals">'
+        +'<div class="corr-st-cell"><div class="corr-st-lbl">Lordo</div><div class="corr-st-val">'+fEur(stLordo)+'</div></div>'
+        +'<div class="corr-st-cell"><div class="corr-st-lbl">Netto IVA</div><div class="corr-st-val" style="color:var(--acc2)">'+fEur(stNetto)+'</div></div>'
+        +'<div class="corr-st-cell"><div class="corr-st-lbl">IVA tot.</div><div class="corr-st-val" style="color:var(--acc4)">'+fEur(stIva)+'</div></div>'
+        +'</div>'
+        +'<div class="corr-store-iva">'
+        +'<div class="corr-st-cell"><div class="corr-st-lbl">Esente</div><div class="corr-st-val" style="color:var(--txt2)">'+fEur(stE)+'</div></div>'
+        +'<div class="corr-st-cell"><div class="corr-st-lbl">IVA 4%</div><div class="corr-st-val" style="color:var(--acc4)">'+fEur(st4)+'</div></div>'
+        +'<div class="corr-st-cell"><div class="corr-st-lbl">IVA 10%</div><div class="corr-st-val" style="color:var(--acc)">'+fEur(st10)+'</div></div>'
+        +'<div class="corr-st-cell"><div class="corr-st-lbl">IVA 22%</div><div class="corr-st-val" style="color:var(--acc3)">'+fEur(st22)+'</div></div>'
+        +'</div>'
+        +'</div>';
+    }
 
-      <!-- Totali: Lordo | Netto IVA | IVA totale -->
-      <div class="corr-card-totals">
-        <div class="corr-tot-cell">
-          <div class="corr-tot-lbl">Totale lordo</div>
-          <div class="corr-tot-val">${fEur(r.lordo)}</div>
-        </div>
-        <div class="corr-tot-cell">
-          <div class="corr-tot-lbl">Netto IVA</div>
-          <div class="corr-tot-val" style="color:var(--acc2)">${fEur(r.netto)}</div>
-        </div>
-        <div class="corr-tot-cell">
-          <div class="corr-tot-lbl">IVA totale</div>
-          <div class="corr-tot-val" style="color:var(--acc4)">${fEur(r.lordo-r.netto)}</div>
-        </div>
-      </div>
+    corrHtml+='<div class="corr-card'+weClass+'">'
+      // Header data
+      +'<div class="corr-card-hd">'
+      +'<div><span class="corr-card-date">'+day+' '+mon+'</span>'
+      +'<span class="corr-card-wd">'+wd+(r.isWeekend?' &middot; WE':'')+'</span></div>'
+      +'<span class="corr-delta '+deltaClass+'">'+r.delta+'</span>'
+      +'</div>'
+      // Totali globali
+      +'<div class="corr-card-totals">'
+      +'<div class="corr-tot-cell"><div class="corr-tot-lbl">Totale lordo</div><div class="corr-tot-val">'+fEur(r.lordo)+'</div></div>'
+      +'<div class="corr-tot-cell"><div class="corr-tot-lbl">Netto IVA</div><div class="corr-tot-val" style="color:var(--acc2)">'+fEur(r.netto)+'</div></div>'
+      +'<div class="corr-tot-cell"><div class="corr-tot-lbl">IVA totale</div><div class="corr-tot-val" style="color:var(--acc4)">'+fEur(r.lordo-r.netto)+'</div></div>'
+      +'</div>'
+      // Aliquote IVA globali
+      +'<div class="corr-card-iva">'
+      +'<div class="corr-iva-cell"><div class="corr-iva-lbl">Esente</div><div class="corr-iva-val" style="color:var(--txt2)">'+fEur(r.iva.esente)+'</div></div>'
+      +'<div class="corr-iva-cell"><div class="corr-iva-lbl">IVA 4%</div><div class="corr-iva-val" style="color:var(--acc4)">'+fEur(r.iva.iva4)+'</div></div>'
+      +'<div class="corr-iva-cell"><div class="corr-iva-lbl">IVA 10%</div><div class="corr-iva-val" style="color:var(--acc)">'+fEur(r.iva.iva10)+'</div></div>'
+      +'<div class="corr-iva-cell"><div class="corr-iva-lbl">IVA 22%</div><div class="corr-iva-val" style="color:var(--acc3)">'+fEur(r.iva.iva22)+'</div></div>'
+      +'</div>'
+      // Dettaglio per negozio
+      +'<div class="corr-stores">'+storesHtml+'</div>'
+      +'</div>';
+  }
+  D('corr-list').innerHTML=corrHtml;
 
-      <!-- Aliquote IVA -->
-      <div class="corr-card-iva">
-        <div class="corr-iva-cell">
-          <div class="corr-iva-lbl">Esente</div>
-          <div class="corr-iva-val" style="color:var(--txt2)">${fEur(r.iva.esente)}</div>
-        </div>
-        <div class="corr-iva-cell">
-          <div class="corr-iva-lbl">IVA 4%</div>
-          <div class="corr-iva-val" style="color:var(--acc4)">${fEur(r.iva.iva4)}</div>
-        </div>
-        <div class="corr-iva-cell">
-          <div class="corr-iva-lbl">IVA 10%</div>
-          <div class="corr-iva-val" style="color:var(--acc)">${fEur(r.iva.iva10)}</div>
-        </div>
-        <div class="corr-iva-cell">
-          <div class="corr-iva-lbl">IVA 22%</div>
-          <div class="corr-iva-val" style="color:var(--acc3)">${fEur(r.iva.iva22)}</div>
-        </div>
-      </div>
-
-    </div>`;
-  }).join('');
-
-  // ── Grafico andamento aliquote IVA ──
+    // ── Grafico andamento aliquote IVA ──
   const chartRows=[...corrRows].reverse();
   const chartLabels=chartRows.map(r=>{const p=r.label.split(' ');return p[0]+' '+p[1];});
   CH['civa']=new Chart(D('civa'),{
@@ -2789,7 +3435,148 @@ function testConn(){const b=D('tbtn'),r=D('tres');b.textContent='⏳ Testing...'
 function applyDB(){closeWizard();setTimeout(()=>{toast('Configurazione DB salvata (demo)','success');},200);}
 
 // ══ MISC ══════════════════════════════════════════════════════
-function refreshData(){toast('Aggiornamento dati in corso...','success');setTimeout(()=>render(cur),300);}
+// ── FULLSCREEN ────────────────────────────────────────────────
+// ── FULLSCREEN — con escamotage iOS ───────────────────────────
+const _isIOS=(/iPad|iPhone|iPod/.test(navigator.userAgent)&&!window.MSStream)||
+             (navigator.platform==='MacIntel'&&navigator.maxTouchPoints>1);
+const _isStandalone=window.navigator.standalone===true||
+                    window.matchMedia('(display-mode: standalone)').matches;
+
+function _updateFsUI(isFs){
+  const btn=D('fs-btn');
+  const iconIn=D('fs-icon-enter');
+  const iconOut=D('fs-icon-exit');
+  const lbl=D('fs-tab-lbl');
+  if(isFs){
+    if(btn)btn.classList.add('is-fs');
+    if(iconIn)iconIn.style.display='none';
+    if(iconOut)iconOut.style.display='block';
+    if(lbl)lbl.textContent='Finestra';
+  } else {
+    if(btn)btn.classList.remove('is-fs');
+    if(iconIn)iconIn.style.display='block';
+    if(iconOut)iconOut.style.display='none';
+    if(lbl)lbl.textContent='Schermo';
+  }
+}
+
+function _showWindowToast(msg){
+  const t=D('triple-toast');
+  if(t){
+    t.textContent=msg||'📱 Modalità finestra';
+    t.classList.add('show');
+    setTimeout(()=>t.classList.remove('show'),2400);
+  }
+}
+
+function _showIOSPrompt(){
+  // Banner con istruzioni per aggiungere alla home
+  let banner=D('ios-fs-banner');
+  if(!banner){
+    banner=document.createElement('div');
+    banner.id='ios-fs-banner';
+    banner.style.cssText='position:fixed;bottom:90px;left:12px;right:12px;background:rgba(19,22,29,.97);border:1.5px solid rgba(124,110,247,.5);border-radius:16px;padding:14px 16px 12px;z-index:9999;box-shadow:0 8px 32px rgba(0,0,0,.6);';
+    banner.innerHTML='<div style="display:flex;align-items:flex-start;gap:10px">'
+      +'<div style="font-size:22px;line-height:1">📲</div>'
+      +'<div style="flex:1">'
+      +'<div style="font-family:\'Space Grotesk\',sans-serif;font-size:13px;font-weight:700;color:#e2e8f0;margin-bottom:4px">Fullscreen su iOS</div>'
+      +'<div style="font-size:11px;color:#94a3b8;line-height:1.5">Tocca <strong style="color:#e2e8f0">Condividi</strong> <span style="font-size:13px">⎙</span> poi <strong style="color:#e2e8f0">"Aggiungi a schermata Home"</strong> per aprire l\'app in fullscreen.</div>'
+      +'</div>'
+      +'<div onclick="document.getElementById(\'ios-fs-banner\').remove()" style="font-size:18px;color:#64748b;cursor:pointer;line-height:1;padding:2px 0 0 4px">✕</div>'
+      +'</div>';
+    document.body.appendChild(banner);
+    setTimeout(()=>{if(D('ios-fs-banner'))D('ios-fs-banner').remove();},8000);
+  } else {
+    banner.remove();
+  }
+}
+
+function toggleFS(){
+  // iOS standalone (PWA) — già in fullscreen, non fare nulla
+  if(_isIOS&&_isStandalone){
+    _showWindowToast('✅ Già in modalità fullscreen');
+    return;
+  }
+  // iOS browser normale — non ha API fullscreen, mostra istruzioni
+  if(_isIOS){
+    _showIOSPrompt();
+    return;
+  }
+  // Altri browser — API nativa con fallback webkit
+  const el=document.documentElement;
+  const isFs=!!(document.fullscreenElement||document.webkitFullscreenElement);
+  if(!isFs){
+    const req=el.requestFullscreen||el.webkitRequestFullscreen||el.mozRequestFullScreen||el.msRequestFullscreen;
+    if(req){
+      req.call(el).then(()=>{_updateFsUI(true);}).catch(()=>{
+        toast('Fullscreen non disponibile','error');
+      });
+    } else {
+      toast('Fullscreen non supportato','error');
+    }
+  } else {
+    exitFS();
+  }
+}
+
+function exitFS(){
+  if(_isIOS){
+    _showWindowToast('📱 Su iOS usa il tasto Home');
+    return;
+  }
+  const isFs=!!(document.fullscreenElement||document.webkitFullscreenElement);
+  if(isFs){
+    const ex=document.exitFullscreen||document.webkitExitFullscreen||document.mozCancelFullScreen||document.msExitFullscreen;
+    if(ex) ex.call(document).then(()=>{_updateFsUI(false);_showWindowToast('📱 Modalità finestra');}).catch(()=>{});
+  } else {
+    _showWindowToast('📱 Modalità finestra');
+  }
+}
+
+// Ascolta cambio fullscreen (ESC, gesture sistema) — non iOS
+if(!_isIOS){
+  ['fullscreenchange','webkitfullscreenchange','mozfullscreenchange'].forEach(ev=>{
+    document.addEventListener(ev,()=>{
+      const isFs=!!(document.fullscreenElement||document.webkitFullscreenElement);
+      _updateFsUI(isFs);
+      if(!isFs) _showWindowToast('📱 Modalità finestra');
+    });
+  });
+}
+
+// Aggiorna UI se aperto come PWA standalone su iOS
+if(_isIOS&&_isStandalone) setTimeout(()=>_updateFsUI(true),200);
+
+// ── TRIPLO TAP → modalità finestra ───────────────────────────
+(function(){
+  let tapCount=0, tapTimer=null;
+  document.addEventListener('touchend',function(e){
+    if(e.target.closest('#fs-btn'))return;
+    tapCount++;
+    if(tapTimer)clearTimeout(tapTimer);
+    tapTimer=setTimeout(()=>{tapCount=0;},600);
+    if(tapCount>=3){
+      tapCount=0;
+      if(tapTimer){clearTimeout(tapTimer);tapTimer=null;}
+      exitFS();
+    }
+  },{passive:true});
+  let clickCount=0, clickTimer=null;
+  document.addEventListener('click',function(e){
+    if(e.target.closest('#fs-btn'))return;
+    if(e.sourceCapabilities&&!e.sourceCapabilities.firesTouchEvents===false)return;
+    clickCount++;
+    if(clickTimer)clearTimeout(clickTimer);
+    clickTimer=setTimeout(()=>{clickCount=0;},600);
+    if(clickCount>=3){
+      clickCount=0;
+      if(clickTimer){clearTimeout(clickTimer);clickTimer=null;}
+      exitFS();
+    }
+  });
+})();
+
+function refreshData(){toast('Aggiornamento dati in corso...','success');setTimeout(()=>{render(cur);updateRTTicker();},300);}
 function exportData(){
   const rows=[['Periodo','Incasso','Transazioni','Scontrino Medio'],
     ...Array.from({length:12},(_,i)=>{const k=`2025-${String(i+1).padStart(2,'0')}`;const inc=DATA.incasso[k];const tx=DATA.tx[k];return [MESI_IT[i]+' 2025',inc,tx,(inc/tx).toFixed(2)];})
@@ -3159,104 +3946,24 @@ function buildReceiptHTML(sc){
 function printRT(){
   const content=D('rt-receipt-content').innerHTML;
   const w=window.open('','_blank','width=380,height=650');
-  w.document.write(`<html><head><title>Scontrino</title><style>
-    body{margin:20px;font-family:'Courier New',monospace;font-size:11px;color:#1a1a1a;background:#f0ede8;}
-    .receipt-inner{background:#fff;max-width:310px;margin:0 auto;padding:14px 16px;}
-    .rt-shop-name{font-size:13px;font-weight:700;text-transform:uppercase;text-align:center;}
-    .rt-shop-sub{font-size:9.5px;color:#444;text-align:center;margin-top:1px;}
-    .rt-div{border:none;border-top:1px dashed #bbb;margin:8px 0;}
-    .rt-div-solid{border:none;border-top:1px solid #333;margin:8px 0;}
-    .rt-doc-type{font-size:11.5px;font-weight:700;text-align:center;letter-spacing:1px;}
-    .rt-label{font-size:9px;color:#777;text-transform:uppercase;letter-spacing:2px;text-align:center;}
-    .rt-row{display:flex;justify-content:space-between;}
-    .rt-row-name{flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
-    .rt-row-details{font-size:9.5px;color:#666;padding-left:8px;}
-    .rt-row-price{font-size:10.5px;font-weight:600;text-align:right;min-width:54px;}
-    .rt-subtot{display:flex;justify-content:space-between;font-weight:700;font-size:11px;}
-    .rt-pay-row,.rt-pay-resto{display:flex;justify-content:space-between;}
-    .rt-pay-resto{font-weight:700;}
-    .rt-iva-grid{display:grid;grid-template-columns:28px 1fr 1fr 1fr;gap:2px;font-size:9.5px;}
-    .rt-iva-val,.rt-iva-hdr{text-align:right;}
-    .rt-iva-hdr{font-weight:700;border-bottom:1px solid #ccc;}
-    .rt-footer-info{text-align:center;}
-    .rt-footer-small{font-size:9px;color:#666;line-height:1.6;}
-    .rt-barcode{text-align:center;font-size:13px;font-weight:700;letter-spacing:2px;}
-    .rt-dgfe{font-size:7.5px;color:#aaa;text-align:center;word-break:break-all;}
-  
-/* ── M3 EXPRESSIVE EXTRAS ── */
-/* State layers */
-.kcard,.card,.cass-row,.cassa-card,.rank-row,.pay-row,.promo-row,.wcard,.dcard{
-  transition:box-shadow var(--dur-m) var(--ease-out),transform var(--dur-m) var(--ease-out);
-}
-.kcard:active,.card:active{transform:scale(.985);}
-
-/* Elevation tokens */
-.card{box-shadow:var(--shadow-1);}
-.kcard{box-shadow:var(--shadow-1);}
-
-/* Store overlay M3 */
-.so-card{background:var(--surf2);border:1px solid var(--bdr);border-radius:var(--r-xl);padding:16px;margin-bottom:10px;box-shadow:var(--shadow-1);}
-
-/* KPI cards accent glow */
-.kcard.g{border-color:rgba(124,110,247,.25);}
-.kcard.o{border-color:rgba(0,212,184,.2);}
-.kcard.p{border-color:rgba(255,107,138,.2);}
-.kcard.y{border-color:rgba(255,194,71,.2);}
-
-/* Cassieri row M3 */
-.cass-row{border-radius:var(--r-l);background:var(--surf2);border:1px solid var(--bdr);box-shadow:var(--shadow-1);}
-.cass-best-card{border-radius:var(--r-xl);background:linear-gradient(145deg,rgba(124,110,247,.2),rgba(0,212,184,.08));border:1.5px solid rgba(124,110,247,.3);box-shadow:0 0 20px rgba(124,110,247,.15);}
-
-/* Sort chips M3 */
-.csort{border-radius:var(--r-full);font-family:'Nunito Sans',sans-serif;font-weight:700;font-size:12px;}
-.csort.active{background:var(--acc-dim);border-color:var(--acc);color:var(--acc);box-shadow:0 0 12px rgba(124,110,247,.25);}
-
-/* Promo banner M3 */
-.promo-banner{border-radius:var(--r-xl);background:linear-gradient(135deg,rgba(124,110,247,.12),rgba(0,212,184,.06));border:1.5px solid rgba(124,110,247,.2);box-shadow:var(--shadow-1);}
-
-/* Search inputs M3 */
-.cass-search,.sco-search{border-radius:var(--r-xl);background:var(--surf3);border:1.5px solid var(--bdr);}
-.cass-search:focus-within,.sco-search:focus-within{border-color:var(--acc);box-shadow:0 0 0 3px rgba(124,110,247,.15);}
-
-/* Dept cards M3 */
-.dcard{border-radius:var(--r-xl);background:var(--surf2);box-shadow:var(--shadow-1);}
-
-/* Week list M3 */
-.wcard{border-radius:var(--r-l);background:var(--surf2);box-shadow:var(--shadow-1);}
-
-/* Settings stabs M3 */
-.stab{border-radius:var(--r-full);font-family:'Nunito Sans',sans-serif;font-weight:700;}
-.stab.active{background:var(--acc);color:#fff;box-shadow:0 0 16px rgba(124,110,247,.35);}
-
-/* Drawer handle M3 */
-.dh{background:var(--bdr2);border-radius:var(--r-full);}
-
-/* Scontrini M3 */
-.sco-row{border-radius:var(--r-l);background:var(--surf2);box-shadow:var(--shadow-1);}
-.sco-totbar{background:rgba(19,22,29,.96);backdrop-filter:blur(16px);}
-
-/* Save banner M3 */
-.save-banner{background:rgba(124,110,247,.12);border:1.5px solid rgba(124,110,247,.3);border-radius:var(--r-xl);backdrop-filter:blur(8px);}
-.save-banner-btn{background:var(--acc);border-radius:var(--r-m);font-family:'Nunito Sans',sans-serif;font-weight:800;}
-
-/* Cassa card M3 */
-.cassa-card{border-radius:var(--r-xl);background:var(--surf2);box-shadow:var(--shadow-1);}
-
-/* Toast M3 */
-.toast{border-radius:var(--r-xl);background:var(--surf3);backdrop-filter:blur(12px);border:1px solid var(--bdr2);box-shadow:var(--shadow-3);}
-.toast.success{border-left:3px solid var(--acc);}
-.toast.error{border-left:3px solid var(--red);}
-
-/* M3 ripple-like press effect */
-@keyframes m3-press{0%{transform:scale(1);}40%{transform:scale(.95);}100%{transform:scale(1);}}
-.gpchip:active,.pchip:active,.csort:active,.sbtn:active{animation:m3-press var(--dur-m) var(--ease-spring);}
-</style></head><body><div class="receipt-inner">${content}</div></body></html>`);
+  var _rcss = 'body{margin:20px;font-family:\'Courier New\',monospace;font-size:11px;color:#1a1a1a;background:#f0ede8;}     .receipt-inner{background:#fff;max-width:310px;margin:0 auto;padding:14px 16px;}     .rt-shop-name{font-size:13px;font-weight:700;text-transform:uppercase;text-align:center;}     .rt-shop-sub{font-size:9.5px;color:#444;text-align:center;margin-top:1px;}     .rt-div{border:none;border-top:1px dashed #bbb;margin:8px 0;}     .rt-div-solid{border:none;border-top:1px solid #333;margin:8px 0;}     .rt-doc-type{font-size:11.5px;font-weight:700;text-align:center;letter-spacing:1px;}     .rt-label{font-size:9px;color:#777;text-transform:uppercase;letter-spacing:2px;text-align:center;}     .rt-row{display:flex;justify-content:space-between;}     .rt-row-name{flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}     .rt-row-details{font-size:9.5px;color:#666;padding-left:8px;}     .rt-row-price{font-size:10.5px;font-weight:600;text-align:right;min-width:54px;}     .rt-subtot{display:flex;justify-content:space-between;font-weight:700;font-size:11px;}     .rt-pay-row,.rt-pay-resto{display:flex;justify-content:space-between;}     .rt-pay-resto{font-weight:700;}     .rt-iva-grid{display:grid;grid-template-columns:28px 1fr 1fr 1fr;gap:2px;font-size:9.5px;}     .rt-iva-val,.rt-iva-hdr{text-align:right;}     .rt-iva-hdr{font-weight:700;border-bottom:1px solid #ccc;}     .rt-footer-info{text-align:center;}     .rt-footer-small{font-size:9px;color:#666;line-height:1.6;}     .rt-barcode{text-align:center;font-size:13px;font-weight:700;letter-spacing:2px;}     .rt-dgfe{font-size:7.5px;color:#aaa;text-align:center;word-break:break-all;}    /* ── M3 EXPRESSIVE EXTRAS ── */ /* State layers */ .kcard,.card,.cass-row,.cassa-card,.rank-row,.pay-row,.promo-row,.wcard,.dcard{   transition:box-shadow var(--dur-m) var(--ease-out),transform var(--dur-m) var(--ease-out); } .kcard:active,.card:active{transform:scale(.985);}  /* Elevation tokens */ .card{box-shadow:var(--shadow-1);} .kcard{box-shadow:var(--shadow-1);}  /* Store overlay M3 */ .so-card{background:var(--surf2);border:1px solid var(--bdr);border-radius:var(--r-xl);padding:16px;margin-bottom:10px;box-shadow:var(--shadow-1);}  /* KPI cards accent glow */ .kcard.g{border-color:rgba(124,110,247,.25);} .kcard.o{border-color:rgba(0,212,184,.2);} .kcard.p{border-color:rgba(255,107,138,.2);} .kcard.y{border-color:rgba(255,194,71,.2);}  /* Cassieri row M3 */ .cass-row{border-radius:var(--r-l);background:var(--surf2);border:1px solid var(--bdr);box-shadow:var(--shadow-1);} .cass-best-card{border-radius:var(--r-xl);background:linear-gradient(145deg,rgba(124,110,247,.2),rgba(0,212,184,.08));border:1.5px solid rgba(124,110,247,.3);box-shadow:0 0 20px rgba(124,110,247,.15);}  /* Sort chips M3 */ .csort{border-radius:var(--r-full);font-family:\'Nunito Sans\',sans-serif;font-weight:700;font-size:12px;} .csort.active{background:var(--acc-dim);border-color:var(--acc);color:var(--acc);box-shadow:0 0 12px rgba(124,110,247,.25);}  /* Promo banner M3 */ .promo-banner{border-radius:var(--r-xl);background:linear-gradient(135deg,rgba(124,110,247,.12),rgba(0,212,184,.06));border:1.5px solid rgba(124,110,247,.2);box-shadow:var(--shadow-1);}  /* Search inputs M3 */ .cass-search,.sco-search{border-radius:var(--r-xl);background:var(--surf3);border:1.5px solid var(--bdr);} .cass-search:focus-within,.sco-search:focus-within{border-color:var(--acc);box-shadow:0 0 0 3px rgba(124,110,247,.15);}  /* Dept cards M3 */ .dcard{border-radius:var(--r-xl);background:var(--surf2);box-shadow:var(--shadow-1);}  /* Week list M3 */ .wcard{border-radius:var(--r-l);background:var(--surf2);box-shadow:var(--shadow-1);}  /* Settings stabs M3 */ .stab{border-radius:var(--r-full);font-family:\'Nunito Sans\',sans-serif;font-weight:700;} .stab.active{background:var(--acc);color:#fff;box-shadow:0 0 16px rgba(124,110,247,.35);}  /* Drawer handle M3 */ .dh{background:var(--bdr2);border-radius:var(--r-full);}  /* Scontrini M3 */ .sco-row{border-radius:var(--r-l);background:var(--surf2);box-shadow:var(--shadow-1);} .sco-totbar{background:rgba(19,22,29,.96);backdrop-filter:blur(16px);}  /* Save banner M3 */ .save-banner{background:rgba(124,110,247,.12);border:1.5px solid rgba(124,110,247,.3);border-radius:var(--r-xl);backdrop-filter:blur(8px);} .save-banner-btn{background:var(--acc);border-radius:var(--r-m);font-family:\'Nunito Sans\',sans-serif;font-weight:800;}  /* Cassa card M3 */ .cassa-card{border-radius:var(--r-xl);background:var(--surf2);box-shadow:var(--shadow-1);}  /* Toast M3 */ .toast{border-radius:var(--r-xl);background:var(--surf3);backdrop-filter:blur(12px);border:1px solid var(--bdr2);box-shadow:var(--shadow-3);} .toast.success{border-left:3px solid var(--acc);} .toast.error{border-left:3px solid var(--red);}  /* M3 ripple-like press effect */ @keyframes m3-press{0%{transform:scale(1);}40%{transform:scale(.95);}100%{transform:scale(1);}} .gpchip:active,.pchip:active,.csort:active,.sbtn:active{animation:m3-press var(--dur-m) var(--ease-spring);}';
+  var _open = '<'; var _cls = '</';
+  var _rhtml = _open+'html>'+_open+'head>'+_open+'title>Scontrino'+_cls+'title>'
+    + _open+'style>'+_rcss+_cls+'style>'+_cls+'head>'
+    + _open+'body>'+_open+'div class="receipt-inner">'+content+_cls+'div>'+_cls+'body>'+_cls+'html>';
+  w.document.write(_rhtml);
   w.document.close();
   setTimeout(()=>w.print(),400);
 }
 
 // INIT
 CUR_PERIOD.scontrini='Oggi';
+setTimeout(updateRTTicker, 500);
+// Nascondi period bar al caricamento (partenza da sezione Online)
+setTimeout(()=>{
+  const gpb=document.getElementById('global-period-bar'),sa=document.getElementById('SA');
+  if(gpb&&sa){gpb.style.display='none';sa.style.top='calc(var(--st) + 58px)';}
+},100);
 window.addEventListener('load',()=>{
   rSettings();
   renderStoreList('so-list');
